@@ -1,0 +1,276 @@
+.image1{
+  width: 120px;
+  margin: 10px;
+  margin-top: 10px;
+  height: 120px;
+  border-radius: 50%;
+}
+.profile
+{
+  display: flex;
+  /* background: rgb(168, 68, 68); */
+  /* background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114)); */
+  /* background: radial-gradient(circle at 10% 20%, rgb(253, 239, 132) 0%, rgb(247, 198, 169) 54.2%, rgb(21, 186, 196) 100.3%); */
+  /* background: linear-gradient(111.1deg, rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2%); */
+  background: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+
+}
+
+.profile h2{
+  margin-left: 30px ;
+  margin-top: 30px;
+  color: #fff;
+}
+.locate
+{
+  padding: 10px;
+  display: flex;
+  margin-left: 30px;
+  color: #fff ;
+}
+.edit-btn
+{
+  margin-left: 1000px;
+
+}
+.whole{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+
+
+
+
+.edit-btn {
+  --primary-color: #bcacac;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  margin-top: -50px;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+
+
+.deletebtn:hover
+{
+color: red;
+}
+
+
+
+
+.cards {
+  width: 165px;
+  height: 150px;
+  background: white;
+  padding: .4em;
+  border: 1px solid white;
+border-radius: 10px;
+cursor: pointer;
+transition: all 0.5s;
+display: inline-table;
+user-select: none;
+margin-left: 50px;
+margin-top: 15px;
+border: 1px solid rgba(0, 0, 0, 0.196);
+
+}
+
+.add
+{
+  top: 40%;
+  left: 33%;
+}
+.cards:hover
+{
+  background-color: #bdbcbc;
+}
+h3{
+  text-align: center;
+}
+.address p
+{
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.opt-btns
+{
+  padding: 2px;
+  margin-top: 5px;
+  display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.opt-btns button:hover
+{
+  background-color: #dbcbcb3f;
+}
+
+.address
+{
+  width: 200px;
+  height: 120px;
+  background:white;
+  padding: 10px 10px 0;
+  border: 1px solid white;
+border-radius: 10px;
+cursor: pointer;
+transition: all 0.5s;
+display: inline-table;
+user-select: none;
+text-align: center;
+margin-left: 50px;
+margin-top: 15px;
+border: 1px solid rgba(0, 0, 0, 0.196);
+}
+.address p
+{
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.userWish{
+  display: flex;
+  justify-content: space-around;
+}
+.CuisineList{
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 30px;
+
+}
+.fav{
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px 6px 10px rgba(28, 26, 26, 0.25);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-bottom: 3px solid #000;
+}
+.names{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 0px 6px 10px rgba(28, 26, 26, 0.25);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+.heading{
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  box-shadow: 0px 6px 10px rgba(28, 26, 26, 0.25);
+  /* background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147)); */
+
+}
+.restaurantList{
+  width: 400px;
+  margin-top: 30px;
+}
+.restImg{
+  display: flex;
+  width: 14%;
+  position: relative;
+ }
+.restImg img{
+  width: 100%;
+  height: 10rem;
+}
+.restImg button{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border: none;
+  outline: none;
+  background-color: #000000da;
+  width: 3rem;
+  height: 3rem;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  transition: 300ms ease-in-out;
+}
+.restImg button:hover{
+  transform: scale(1.3);
+}
+.restbtn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 30%;
+  height:100%;
+  /* justify-self: flex-end; */
+  margin-left: auto;
+}
+.restbtn button{
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  /* width: 70%; */
+background-color: #000;
+height: 50px;
+cursor: pointer;
+}
+.restbtn button:nth-child(1){
+  width: 9rem;
+background-color: #000;
+color: #fff;
+}

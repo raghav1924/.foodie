@@ -1,0 +1,60 @@
+
+<body>
+  <div class="container">
+    <h2>ORDER ID:  &nbsp; &nbsp;  &nbsp;{{orderDetials.orderId}}</h2>
+    <h2>USER ID:  &nbsp; &nbsp; &nbsp; &nbsp;{{orderDetials.userId}}</h2>
+    <h5>ORDER STATUS: &nbsp; &nbsp; {{orderDetials.orderStatus}}</h5>
+    <h5>ORDERED ON: &nbsp; &nbsp; &nbsp; &nbsp; {{orderDetials.orderedOn}}</h5>
+    <hr>
+    <div class="address">
+    <table>
+     <tbody>
+      <tr>
+        <th>ORDER PLACE:</th>
+        <td>{{orderDetials.address?.orderPlace}}</td>
+        <th>DOOR NO:</th>
+        <td>{{orderDetials.address?.doorNo}}</td>
+        <th>STREET:</th>
+        <td>{{orderDetials.address?.street}}</td>
+        <th>CITY:</th>
+        <td>{{orderDetials.address?.city}}</td>
+        <th>STATE :</th>
+        <td>{{orderDetials.address?.state}}</td>
+        <th>ZIPCODE :</th>
+        <td>{{orderDetials.address?.zipcode}}</td>
+      </tr>
+     </tbody>
+    </table>
+  </div>
+<hr>
+    <div class="pricetable">
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Order Items</th>
+          <th>Quantity</th>
+          <th>Price</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cartItem of orderDetials.cartItems">
+          <td>{{cartItem.foodItem.itemName}}</td>
+          <td>{{cartItem.quantity}}</td>
+        <td> ₹ {{cartItem.price}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="amount">
+      <th>Total Price: &nbsp; &nbsp; ₹{{orderDetials.totalAmount}}</th>
+    </div>
+
+  </div>
+  <!-- <app-footer></app-footer> -->
+
+</body>

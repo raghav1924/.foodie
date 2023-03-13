@@ -1,0 +1,182 @@
+
+
+section{
+  background: url("../../../../assets/food images/pexels-volkan-vardar-3887985.jpg") no-repeat center ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 730px;
+  /* max-height: 100vh; */
+}
+.rightcont{
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  padding: 0px 2rem;
+  height: 500px;
+  /* align-self: flex-start; */
+
+}
+.container{
+  height: 100%;
+  max-height: 800px;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 9rem;
+}
+
+.getstarted{
+  width: 100%;
+  padding: 0;
+  /* max-width: 220px; */
+
+}
+.getstarted h3{
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.rightcont form{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.rightcont form p{
+/* max-width: 220px; */
+font-size: 10px;
+font-weight: lighter;
+}
+
+.rightcont form .input {
+  /* max-width: 190px; */
+  width: 100%;
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  margin: 5px 0px;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+.rightcont form .input:enabled:hover, .input:enabled:focus, .input-group:enabled:hover .input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.rightcont form button{
+  padding: 17px 40px;
+ border-radius: 50px;
+ border: 0;
+ background-color: rgb(0, 0, 0);
+ box-shadow: rgba(255, 255, 255, 0.05) 0 0 8px;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ font-size: 15px;
+ transition: all .5s ease;
+ color: #fff;
+}
+
+.rightcont form button:enabled:hover {
+  letter-spacing: 3px;
+  background-color: #000;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(0 0 0) 0px 7px 29px 0px;
+ }
+ .rightcont form button:enabled:active {
+  letter-spacing: 3px;
+  background-color: hsl(240, 1%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+ }
+
+ .leftcont{
+  display: inline-block;
+  width: 25rem;
+  margin: 5rem 8rem;
+  padding: 0rem 0 0 3rem;
+  margin-left: 0;
+  color: #fff;
+ }
+ .leftcont h2{
+  display: inline;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 4rem;
+ }
+ .leftcont p{
+  width: 100%;
+  /* display: block; */
+  font-size: 1.1rem;
+  /* font-weight: 500; */
+  line-height: 1.2rem;
+ }
+
+ .rightcont form button:disabled:hover{
+  background-color: rgb(211, 0, 0);
+ }
+ .email{
+  width: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: -2rem; */
+ }
+ /* .rightcont form .email .input{
+  width: 160%;
+ } */
+ .email mat-icon{
+  margin: 0 .5rem;
+  width: 2rem;
+
+ }
+
+ @media screen  and (max-width:1135px) {
+    .container{
+      flex-direction: column;
+      padding: 0;
+      max-width: none;
+    }
+    .rightcont{
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+    .leftcont{
+      width: 95%;
+      max-width: none;
+      min-width: none;
+      /* margin: 1rem; */
+     margin: 5rem 1rem;
+      padding: 0;
+    }
+    .email{
+      width: 100%;
+    }
+ }
+
+ .error-message {
+  color: red;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+  font-size: small;
+  width: 100%;
+}
+.error-messages {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+justify-self: flex-start;
+width: 100%;
+}

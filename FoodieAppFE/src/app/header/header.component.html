@@ -1,0 +1,28 @@
+<body>
+
+<header>
+  <nav>
+    <div class="logocont" routerLink="../home">
+      <img src="../../assets/food images/Foodlogo.png"  class="flogo" alt="" srcset="">
+      <h1>.foodie</h1>
+    </div>
+    <div class="serachdiv dropdown">
+    <img src="../../assets/food images/SLogo.png" alt="" srcset="">
+    <input type="text" placeholder="Search your city" [(ngModel)]="selectedValue" (input)="filterOptions()" class="dropdown-input">
+    <div class="dropdown-content" *ngIf="showDropdown">
+      <a *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="dropdown-option">{{option}}</a>
+    </div>
+    </div>
+
+    <ul>
+      <li><a routerLink="../seller">Add Restaurant<mat-icon>dinner_dining</mat-icon></a></li>
+      <li *ngIf="logedIN" ><a routerLink="../cart">Cart<mat-icon>fastfood</mat-icon></a></li>
+      <li *ngIf="!logedIN"><a  (click)="openDialog()">Log in <mat-icon>how_to_reg</mat-icon></a></li>
+      <li *ngIf="logedIN"><a routerLink="../userprofile"><img class="profilePic" src="data:image/jpg;base64,{{userDetails?.profileImage}}" alt="">{{userDetails?.name}}</a></li>
+      <li *ngIf="logedIN"><a  (click)="logOut()">Log out <mat-icon>logout</mat-icon></a></li>
+
+    </ul>
+  </nav>
+</header>
+
+</body>

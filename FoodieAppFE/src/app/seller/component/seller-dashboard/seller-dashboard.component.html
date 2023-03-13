@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="cardss" *ngFor="let restaurant of allRestaurants" routerLink="{{restaurant.restaurantId}}" (click)="setRestId(restaurant.restaurantId)">
+      <img class="card-image" src="data:image/jpg;base64,{{restaurant.restaurantImage}}" alt="">
+      <div class="card-heading">{{restaurant.restaurantName}}</div>
+       <div  class="card-cuisine" *ngFor="let cuisine of restaurant.menu">{{cuisine.cuisineName}},</div>
+       <hr>
+       <div class="discount">
+        <h5><img src="../../../../assets/food images/discount.png"> 15% Discount </h5>   <h5> Free Delivery</h5>
+      </div>
+      <div *ngIf="notification(restaurant.orders!)!=0" class="notification">{{notification(restaurant.orders!)}}</div>
+    </div>
+
+  </div>
+
+  <!-- <app-footer></app-footer> -->

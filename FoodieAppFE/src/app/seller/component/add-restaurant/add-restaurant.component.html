@@ -1,0 +1,36 @@
+<body>
+  
+
+<div class="login-box">
+    <form [formGroup]="AddRestuarant" >
+      <div class="user-box">
+        <input required="" name="" type="text" formControlName="restaurantName">
+        <label>Restaurant Name</label>
+      </div>
+      <div id="address" formGroupName="address">Address 
+      <div class="user-box">
+        <input required="" name="" type="text" formControlName="street">
+        <label>street</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="text" formControlName="city">
+        <label>City</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="text" formControlName="state">
+        <label>State</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="text" formControlName="zipcode">
+        <label>zipcode</label>
+      </div>
+      </div>
+     
+      <a class="butt" (click)="registerRestuarant()" mat-dialog-close>
+             SEND
+         <span></span>
+      </a>
+    </form>
+  </div>
+  
+</body>

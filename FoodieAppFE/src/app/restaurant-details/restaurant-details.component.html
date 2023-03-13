@@ -1,0 +1,63 @@
+<body>
+
+
+<div class="backimg">
+    <img src="data:image/jpg;base64,{{restaurantDeatils?.restaurantImage}}" alt="">
+
+    <div class="Address">
+        <h1 class="restName">{{restaurantDeatils?.restaurantName}}</h1>
+        <p class="add" id="street">{{restaurantDeatils?.address?.street}}</p>
+        <p class="add" id="city">{{restaurantDeatils?.address?.city}}</p>
+        <div id="zip">
+            <p class="add" id="state">{{restaurantDeatils?.address?.state}},</p>
+            <p class="add" id="zipcode">{{restaurantDeatils?.address?.zipcode}}</p>
+        </div>
+    </div>
+    <div class="wishlist">
+    <mat-icon  (click)="addRestToWishlist(restaurantDeatils?.restaurantName)">favorite</mat-icon>
+</div>
+</div>
+<div class="sidecont">
+    <div class="sideContainer1">
+        <h2 class="menu">Menu</h2>
+        <div class="menulist">
+            <div  *ngFor="let cuisine of restaurantDeatils?.menu" ><br>
+     <a routerLink="#{{cuisine.cuisineName}}"  class="menu1">{{cuisine.cuisineName}}</a>
+    </div>
+        </div>
+    </div>
+
+    <div class="sideContainer2">
+        <div *ngFor="let cuisine of restaurantDeatils?.menu">
+            <div class="cuisineName">
+                <p>{{cuisine.cuisineName}}</p>
+                <mat-icon class="wishlist2" (click)="addCuisineTowishlist(cuisine.cuisineName)">favorite</mat-icon>
+            </div>
+            <div class="cards1">
+                <div *ngFor="let food of cuisine.foodItems" class="card3">
+                    <div class="card-image"><img style="height: 180px;"
+                            src="data:image/jpg;base64,{{food.foodImage}}"
+                            alt=""></div>
+                    <div class="category">{{food.itemName}}</div>
+                    <div class="heading">
+                        <p>₹ {{food.itemPrice}}</p>
+                    </div>
+                    <div class="disc">{{food.itemDescription}}</div>
+                    <!-- <div class="input-group">
+                      <button class="minus-btn" (click)="decrease(food.itemName)">-</button>
+                      <input type="number" min="0" max="100" [(ngModel)]="quantity" name="food.itemName" disabled>
+                      <button class="plus-btn" (click)="increase()">+</button>
+                    </div> -->
+                    <button class="add-to-cart" (click)="addToCart(food,restaurantDeatils?.restaurantId,restaurantDeatils?.restaurantName)" ><mat-icon>add_shopping_cart</mat-icon></button>
+
+
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<app-footer></app-footer>
+</body>

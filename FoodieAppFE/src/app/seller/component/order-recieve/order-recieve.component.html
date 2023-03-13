@@ -1,0 +1,33 @@
+
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Order-ID</th>
+          <th>Amount</th>
+          <th>Order-Status</th>
+          <th>Accept</th>
+          <th>Cancel</th>
+          <th>Out For Delivery</th>
+          <th>Delivered</th>
+          <th>See Order Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of restaurantDetails.orders">
+          <td>{{order.orderId}}</td>
+          <td>{{order.totalAmount}}</td>
+          <td>{{order.orderStatus}}</td>
+          <td><mat-icon (click)="accept(order)">check_circle</mat-icon></td>
+          <td><mat-icon (click)="cancel(order)">cancel</mat-icon></td>
+          <td><mat-icon (click)="outForDelivery(order)">local_shipping</mat-icon></td>
+          <td><mat-icon (click)="delivered(order)">verified</mat-icon></td>
+          <td><a routerLink="{{order.orderId}}">More..</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <app-footer></app-footer> -->
+
+</body>

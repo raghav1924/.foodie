@@ -1,0 +1,132 @@
+<body>
+  <div class="cont">
+    <div class="form sign-in">
+
+      <form [formGroup]="loginForUser" >
+      <h2>Sign In</h2>
+
+      
+      <label>
+        <span>Email Address</span>
+        <input type="email" name="email"  required="required" formControlName="email">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password"  name="password" required="required" formControlName="password">
+      </label>
+      <button class="submit" type="button" mat-dialog-close (click)="sendLoginData()">Sign In</button>
+    </form>
+
+
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h1>New here?</h1>
+          <p>sign up and discover</p>
+        </div>
+        <div class="img-text m-in">
+          <h1>One of us?</h1>
+          <p>just sign in</p>
+        </div>
+        <div class="img-btn" (click)="onClick()">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Sign In</span>
+        </div>
+      </div>
+
+
+
+
+      <div class="form sign-up">
+        <form  [formGroup]="signupForm" >
+        <h2>Sign Up</h2>
+
+        <label class="main">
+
+          <span>Email</span>
+       <div class="email"><input type="email"  formControlName="email"><mat-icon id="tickbtn" (click)="openOTPDailog()">check_circle</mat-icon></div>
+        </label>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.email">
+            <code class="error-message" *ngIf="signupForm.get('email')?.hasError(error.type) && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+              {{ error.message }}
+            </code>
+            <code class="error-message" *ngIf="signupForm.get('email')?.errors?.['pattern']">
+              email@email.com 
+            </code>
+          </ng-container>
+        </div>
+
+        <label class="main">
+          <span class="contents">Name</span>
+          <input type="text" formControlName="name" >
+        </label>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.name">
+            <code class="error-message" *ngIf="signupForm.get('name')?.hasError(error.type) && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">
+              {{ error.message }}
+            </code>
+          </ng-container>
+        </div>
+
+
+        <label class="main">
+          <span class="contents">phone </span>
+          <input type="tel"  formControlName="phoneNo" >
+        </label>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.phoneNo">
+            <code class="error-message" *ngIf="signupForm.get('phoneNo')?.hasError(error.type) && (signupForm.get('phoneNo')?.dirty || signupForm.get('phoneNo')?.touched)">
+              {{ error.message }}
+            </code>
+            <code class="error-message" *ngIf="signupForm.get('phoneNo')?.errors?.['pattern']">
+              7894561234
+            </code>
+          </ng-container>
+        </div>
+
+
+        <label class="main">
+          <span class="contents">Password</span>
+          <input type="password" formControlName="password" >
+        </label>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.password">
+            <code class="error-message" *ngIf="signupForm.get('password')?.hasError(error.type) && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+              {{ error.message }}
+            </code>
+            <code class="error-message" *ngIf="signupForm.get('password')?.errors?.['pattern']">
+              Password@123
+            </code>
+          </ng-container>
+        </div>
+
+
+        <label class="main">
+          <span class="contents">Confirm Password</span>
+          <input type="password" formControlName="confirmPassword" >
+        </label>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.confirmPassword">
+            <code class="error-message" *ngIf="signupForm.get('confirmPassword')?.hasError(error.type) && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)">
+              {{ error.message }}
+            </code>
+            <code class="error-message" *ngIf="signupForm.get('confirmPassword')?.errors?.['pattern']">
+              Password@123
+            </code>
+          </ng-container>
+        </div>
+          <code class="error-message"  *ngIf="signupForm.errors?.['mustMatch']===false">
+            Password and Confirm Password should match.
+          </code>
+
+
+        <button type="button" class="submit" (click)="sendSignUpData()">Sign Up Now</button>
+        <!-- <mat-icon>home</mat-icon> -->
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>

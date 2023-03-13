@@ -1,0 +1,37 @@
+
+<form [formGroup]="loginForSeller" (ngSubmit)="sendLoginData()">
+<div class="container">
+  <div class="card">
+      <a class="login">Log in</a>
+      <div class="inputBox">
+          <input type="text" required="required" formControlName="email">
+          <span class="user">Email</span>
+          <!-- <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.email">
+              <code class="error-message" *ngIf="loginForSeller.get('email')?.hasError(error.type) && (loginForSeller.get('email')?.dirty || loginForSeller.get('email')?.touched)">
+                {{ error.message }}
+              </code>
+              <code class="error-message" *ngIf="loginForSeller.get('email')?.errors?.['pattern']">
+                email@email.com 
+              </code>
+            </ng-container>
+          </div> -->
+      </div>
+      <div class="inputBox">
+          <input type="password" required="required" formControlName="password">
+          <span>Password</span>
+          <!-- <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.password">
+              <code class="error-message" *ngIf="loginForSeller.get('password')?.hasError(error.type) && (loginForSeller.get('password')?.dirty || loginForSeller.get('password')?.touched)">
+                {{ error.message }}
+              </code>
+              <code class="error-message" *ngIf="loginForSeller.get('password')?.errors?.['pattern']">
+                Password@123
+              </code>
+            </ng-container>
+          </div> -->
+      </div>
+      <button class="enter" type="submit" [disabled]="!loginForSeller.valid" mat-dialog-close>Enter</button>
+  </div>
+</div>
+</form>

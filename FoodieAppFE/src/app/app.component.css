@@ -1,0 +1,41 @@
+app-user-login-signup{
+  border-radius: 200%;
+}
+
+
+.backbtn{
+  z-index: 10;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  /* font-size: 2rem; */
+  /* font-weight: 900; */
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.backbtn mat-icon{
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-left: 0.5rem;
+}
+app-footer{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+app-header{
+  /* margin-bottom: 5rem;
+  position: absolute;
+  top: 0;left: 0;
+  z-index: 9;
+  width: 100%; */
+}

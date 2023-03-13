@@ -1,0 +1,26 @@
+
+<body>
+
+<div class="whole">
+    <div>
+        <div class="cards" (click)="addAddress()">
+            <h3>Add Address</h3>
+            <button class="add" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+              <mat-icon>add_circle</mat-icon>
+            </button>
+
+          </div>
+      </div>
+
+    <div class="addressBox">
+      <div class="address" *ngFor="let Address of userDetails?.addresses" (click)="setAddress(Address)" mat-dialog-close>
+       <h3>{{Address.orderPlace}}</h3>
+       <p style="margin-top:15px ;">{{Address.doorNo}},{{Address.street}},{{Address.city}},{{Address.state}},{{Address.zipcode}}</p>
+       <!-- <div class="opt-btns">
+        <button mat-button color="warn" class="delete" (click)="deleteAddress(Address.orderPlace)">Delete</button>
+       </div> -->
+
+      </div>
+    </div>
+    </div>
+  </body>

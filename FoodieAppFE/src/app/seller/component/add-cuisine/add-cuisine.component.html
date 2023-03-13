@@ -1,0 +1,9 @@
+<form [formGroup]="AddCuisines">
+    <div class="cardForCuisine">
+        <span class="card__title">ADD CUISINE</span>
+        <div class="card__form">
+            <input placeholder="Cuisine Name" type="text" formControlName="cuisineName">
+            <button class="sign-up" mat-dialog-close [disabled]="!AddCuisines.valid" (click)="sendToCuisineList()">Add Cuisine</button>
+        </div>
+    </div>
+    </form> 

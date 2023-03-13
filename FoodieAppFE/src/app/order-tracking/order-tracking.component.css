@@ -1,0 +1,87 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+table th,table td{
+  padding: 5px 1rem;
+  text-align: start;
+}
+.amount
+{
+  /* margin-left: 710px; */
+  font-size: large;
+  margin: auto;
+  text-align: center;
+}
+
+.address h4
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+}
+.container
+{
+  width: 85%;
+
+margin: auto;
+margin-bottom: 3rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.container h5
+{
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.container h2
+{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.pricetable
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  flex-direction: column;
+  /* margin:5rem; */
+}
+thead th
+{
+  font-size: 1.0rem;
+}
+td
+{
+  text-align: center;
+}
+.orderdetail{
+  background-color: rgb(32, 32, 32);
+padding: 2rem;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  width: 25rem;
+}
+
+.ordertrackingimg img{
+  width: 15rem;
+  height: 15rem;
+ }
+ .ordertrackingimg{
+  margin-left: 9rem;
+ }

@@ -1,0 +1,113 @@
+<body>
+  <div class="container">
+    <div class="ordertrackingimg">
+      <div *ngIf="orderStatus=='ORDERED'" class="img">
+        <img src="../../assets/food images/waiting.gif" alt="">
+      </div>
+      <div *ngIf="orderStatus=='PREPARING'" class="img">
+        <img src="../../assets/food images/cooking.gif" alt="">
+      </div>
+      <div *ngIf="orderStatus=='OUTFORDELIVERY'" class="img">
+        <img src="../../assets/food images/outForDelivery.gif" alt="">
+      </div>
+      <div *ngIf="orderStatus=='DELIVERED'" class="img">
+        <img style="height:3rem" src="../../assets/food images/delivered.gif" alt="">
+      </div>
+      <div *ngIf="orderStatus=='CANCELLED'" class="img">
+        <img src="../../assets/food images/cancel.gif" alt="">
+      </div>
+  <h2>YOUR ORDER IS {{orderDetials.orderStatus}}...</h2>
+
+    </div>
+    <div class="orderdetail">
+     <table>
+        <tbody>
+         <tr>
+
+           <th>ORDER ID:</th>
+           <td>{{orderDetials.orderId}}</td>
+           </tr>
+           <tr>
+           <th>RESTAURANT NAME:</th>
+           <td>{{orderDetials.restaurantName}}</td>
+         </tr>
+         <tr>
+           <th>ORDER STATUS:</th>
+           <td>{{orderDetials.orderStatus}}</td>
+         </tr>
+         <tr>
+           <th>ORDERED ON:</th>
+           <td>{{orderDetials.orderedOn}}</td>
+         </tr>
+
+
+        </tbody>
+       </table>
+      <hr>
+      <div class="address">
+      <table>
+       <tbody>
+        <tr>
+
+          <th>ORDER PLACE:</th>
+          <td>{{orderDetials.address?.orderPlace}}</td>
+          </tr>
+          <tr>
+          <th>DOOR NO:</th>
+          <td>{{orderDetials.address?.doorNo}}</td>
+        </tr>
+        <tr>
+          <th>STREET:</th>
+          <td>{{orderDetials.address?.street}}</td>
+        </tr>
+        <tr>
+          <th>CITY:</th>
+          <td>{{orderDetials.address?.city}}</td>
+        </tr>
+        <tr>
+          <th>STATE :</th>
+          <td>{{orderDetials.address?.state}}</td>
+        </tr>
+        <tr>
+          <th>ZIPCODE :</th>
+          <td>{{orderDetials.address?.zipcode}}</td>
+        </tr>
+
+       </tbody>
+      </table>
+    </div>
+  <hr>
+      <div class="pricetable">
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Order Items</th>
+            <th>Quantity</th>
+            <th>Price</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartItem of orderDetials.cartItems">
+            <td>{{cartItem.foodItem.itemName}}</td>
+            <td>{{cartItem.quantity}}</td>
+          <td> ₹ {{cartItem.price}}</td>
+
+          </tr>
+          <tr>
+            <th></th>
+            <th>Total Price:</th>
+            <th>₹{{orderDetials.totalAmount}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+
+
+  </div>
+  <app-footer></app-footer>
+</body>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="GatewayApp" />
+        <module name="EurekaApp" />
+        <module name="MailServiceApp" />
+        <module name="UserServiceApp" />
+        <module name="SellerAuthApp" />
+        <module name="SellerServiceApp" />
+        <module name="UserAuthApp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EurekaApp" target="17" />
+      <module name="FoodieAppBE" target="17" />
+      <module name="GatewayApp" target="17" />
+      <module name="MailServiceApp" target="17" />
+      <module name="SellerAuthApp" target="17" />
+      <module name="SellerServiceApp" target="17" />
+      <module name="UserAuthApp" target="17" />
+      <module name="UserServiceApp" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EurekaApp" options="-parameters" />
+      <module name="GatewayApp" options="-parameters" />
+      <module name="MailServiceApp" options="-parameters" />
+      <module name="SellerAuthApp" options="-parameters" />
+      <module name="SellerServiceApp" options="-parameters" />
+      <module name="UserAuthApp" options="-parameters" />
+      <module name="UserServiceApp" options="-parameters" />
+    </option>
+  </component>
+</project>

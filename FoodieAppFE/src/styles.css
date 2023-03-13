@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.cdk-overlay-container
+{
+    background-color: rgba(0,0,0,0.53);
+    backdrop-filter: blur(10px);
+
+}
+
+/* .mat-mdc-dialog-surface{
+  border-radius: 50%;
+}
+.mdc-dialog__surface{
+  border-radius: 50%;
+} */
+/*
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+link[type="image/png"]{
+  width: 3rem;
+}

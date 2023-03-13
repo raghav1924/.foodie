@@ -1,0 +1,64 @@
+<div class="profile">
+    <div class="restImg">
+      <img class="image1" src="data:image/jpg;base64,{{userDetails?.profileImage}}" alt="">
+      <button (click)="imageDialog('PROFILE')"><mat-icon>edit</mat-icon></button>
+    </div>
+    <div >
+        <h2>{{userDetails?.name}}</h2>
+        <div class="locate">
+            <i class='fas fa-map-marker-alt' style='font-size:24px'></i>  <h4 style="margin-left: 6px;">{{city}}</h4>
+        </div>
+            <button class="edit-btn" (click)="editProfile()">
+                Edit Profile
+                 <div class="arrow-wrapper">
+                     <div class="arrow"></div>
+
+                 </div>
+             </button>
+    </div>
+</div>
+<div class="whole">
+<div>
+    <div class="cards" (click)="addAddress()">
+        <button class="add" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+          <mat-icon>add_circle</mat-icon>
+        </button>
+       <h3>Add Address</h3>
+      </div>
+  </div>
+
+<div class="addressBox">
+  <div class="address" *ngFor="let Address of userDetails?.addresses">
+   <h3>{{Address.orderPlace}}</h3>
+   <p style="margin-top:15px ;">Door No: {{Address.doorNo}} </p>
+   <p>{{Address.street}}</p>
+   <p>{{Address.city}},{{Address.state}},{{Address.zipcode}}</p>
+   <div class="opt-btns">
+    <button mat-button color="warn" class="delete" (click)="deleteAddress(Address.orderPlace)">Delete</button>
+   </div>
+
+  </div>
+</div>
+</div>
+<h1 class="heading">WISHLIST</h1>
+<div class="userWish">
+
+<div class="CuisineList">
+    <h1 class="fav">Favourite Cuisines</h1>
+ <div *ngFor="let cuisine of userCuisine"><br>
+    <div class="names">
+    <h4 (click)="getRestaurantByCuisisne(cuisine)" routerLink="cuisine/{{cuisine}}">{{cuisine}}</h4>
+    <mat-icon style="cursor: pointer;" class="deletebtn" (click)="deleteCuisineFromWishlist(cuisine)">delete</mat-icon>
+</div>
+ </div>
+</div>
+<div class="restaurantList">
+    <h1 class="fav">Favourite Restaurants</h1>
+    <div *ngFor="let rest of userRest"><br>
+        <div class="names">
+        <h4 routerLink="{{rest.id}}">{{rest.name}}</h4><mat-icon class="deletebtn" style="cursor: pointer;" (click)="deleteRestaurantFromWishlist(rest.name)">delete</mat-icon>
+    </div>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

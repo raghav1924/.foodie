@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/.foodie.iml" filepath="$PROJECT_DIR$/.idea/.foodie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/EurekaApp/EurekaApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/EurekaApp/EurekaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/FoodieAppBE.iml" filepath="$PROJECT_DIR$/FoodieAppBE/FoodieAppBE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/GatewayApp/GatewayApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/GatewayApp/GatewayApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/MailServiceApp/MailServiceApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/MailServiceApp/MailServiceApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/SellerAuthApp/SellerAuthApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/SellerAuthApp/SellerAuthApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/SellerServiceApp/SellerServiceApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/SellerServiceApp/SellerServiceApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/UserAuthApp/UserAuthApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/UserAuthApp/UserAuthApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoodieAppBE/UserServiceApp/UserServiceApp.iml" filepath="$PROJECT_DIR$/FoodieAppBE/UserServiceApp/UserServiceApp.iml" />
+    </modules>
+  </component>
+</project>

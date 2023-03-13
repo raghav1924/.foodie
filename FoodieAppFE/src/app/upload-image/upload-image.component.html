@@ -1,0 +1,10 @@
+<body>
+
+  <div class="container">
+    <label for="upload"><mat-icon>add_photo_alternate</mat-icon></label>
+    <input type="file" (change)="OnFileChange($event)" id="upload" src="" alt="">
+    <img *ngIf="url" [src]="url" alt="">
+    <button mat-dialog-close (click)="upload()">UPLOAD</button>
+  </div>
+</body>
+

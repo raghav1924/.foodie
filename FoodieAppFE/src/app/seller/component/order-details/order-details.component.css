@@ -1,0 +1,60 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+table th,td{
+  padding: 1rem;
+}
+.amount
+{
+  margin-left: 710px;
+  font-size: large;
+}
+
+.address h4 
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+}
+.container
+{
+  width: 95%;
+
+margin: auto;
+}
+.container h5
+{
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+.container h2
+{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+.pricetable
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  /* margin:5rem; */
+}
+thead th
+{
+  font-size: 1.0rem;
+}
+td
+{
+  text-align: center;
+}

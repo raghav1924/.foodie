@@ -1,0 +1,16 @@
+<body>
+  <header>
+    <nav>
+      <h2 routerLink="/seller/sellerRegister"><strong>.foodie</strong> <br>for Vendors</h2>
+      <ul>
+        <li *ngIf="logedIN"><a (click)="openAddRestaurantDailog()"><mat-icon>dinner_dining</mat-icon>Add Restaurant</a></li>
+        <li *ngIf="!logedIN"><a (click)="openLoginDailog()" ><mat-icon>person</mat-icon>Log in</a></li>
+        <li *ngIf="logedIN"><a routerLink="sellersRestaurant" ><mat-icon>account_circle</mat-icon>{{sellerDetails?.name}}</a></li>
+        <li *ngIf="logedIN"><a (click)="logOut()" ><mat-icon>logout</mat-icon>Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet (activate)="checkLogin()"></router-outlet>
+  <app-footer></app-footer>
+
+</body>

@@ -1,0 +1,11 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+table th,td{
+  padding: 1rem;
+}
+
+mat-icon{
+  cursor: pointer;
+}

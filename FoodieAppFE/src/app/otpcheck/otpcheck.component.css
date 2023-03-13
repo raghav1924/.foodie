@@ -1,0 +1,109 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  /* padding: 2px; */
+  /* margin: 1px; */
+  background-color: transparent;
+}
+
+.form {
+  /* padding: 2rem; */
+  width: 320px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.418);
+  transition: .4s ease-in-out;
+}
+
+.form:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  scale: 0.99;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  color: black;
+  top: 3em;
+  font-weight: bold;
+}
+
+.check {
+  position: relative;
+  align-self: center;
+  top: 4em;
+}
+
+.input {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(235, 235, 235);
+  box-shadow: inset 3px 3px 6px #d1d1d1,
+            inset -3px -3px 6px #ffffff;
+  top: 6.5em;
+  left: 1.1em;
+  padding-left: 15px;
+  transition: .4s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.input:focus {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.btn1 {
+  position: relative;
+  top: 8.5em;
+  left: .3em;
+  width: 97%;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  background: linear-gradient(45deg,#E91E63,#9C27B0,#673AB7);
+  transition: .4s ease-in-out;
+  box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.4);
+}
+
+.btn1:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}
+
+.btn2 {
+  position: relative;
+  top: 10.5em;
+  left: 3.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #000000;
+  transition: .4s ease-in-out;
+}
+
+.btn2:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}

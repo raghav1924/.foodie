@@ -1,0 +1,153 @@
+.whole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+
+.edit-btn {
+    --primary-color: #bcacac;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-top: -50px;
+  }
+
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+
+  button:hover {
+    background-color: var(--hover-color);
+  }
+
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+
+  button:hover .arrow:before {
+    right: 0;
+  }
+
+
+
+
+
+
+
+
+  .cards {
+    width: 250px;
+    height: 80px;
+    background: white;
+    padding: .4em;
+    border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  /* margin-left: 50px;
+  margin-top: 30px; */
+  margin-bottom:2rem ;
+  border: 1px solid rgba(0, 0, 0, 0.196);
+
+  }
+
+ .cards h3
+ {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+ }
+  .cards:hover
+  {
+    background-color: #bdbcbc;
+  }
+
+  .address p
+  {
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .opt-btns
+  {
+    padding: 2px;
+    margin-top: 5px;
+    display: flex;
+  }
+
+  .opt-btns button:hover
+  {
+    background-color: #dbcbcb3f;
+  }
+
+  .address
+  {
+    width: 250px;
+    height: 120px;
+    background:white;
+    padding: 10px 10px 0;
+    border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: inline-table;
+  user-select: none;
+  text-align: center;
+  /* margin-left: 50px; */
+  margin-top: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.196);
+  }
+  .delete{
+   margin-left: 50px;
+  }
+  .addressBox
+  {
+display: grid;
+justify-items: self-start;
+  }

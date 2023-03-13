@@ -1,0 +1,110 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  padding: 0 35px;
+  /* background-color: darkcyan; */
+  flex-direction: column;
+  /* height: 20rem; */
+
+}
+.wrapper{
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  display: flex;
+  margin: 6rem 0px;
+  margin-top: 3rem;
+
+}
+.wrapper mat-icon{
+  height: 46px;
+  width: 46px;
+  font-size: 2rem;
+  background: #fff;
+  text-align: center;
+  line-height: 46px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 34%;
+  transform: translateY(-50%);
+  box-shadow: rgb(0 0 0 / 25%) 0 0 8px;
+
+}
+.wrapper mat-icon:first-child{
+  left: -23px;
+}
+.wrapper mat-icon:last-child{
+  right: -23px;
+}
+.wrapper .carousel {
+  /* width: 90%; */
+  overflow: hidden;
+  font-size: 0px;
+  cursor: pointer;
+  white-space: nowrap ;
+  scroll-behavior: smooth;
+  /* flex:0; */
+  /* flex-wrap: wrap; */
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* -webkit-overflow-scrolling: touch; */
+
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior:none;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+
+.carousel img{
+  display: inline-block;
+  height: auto;
+  width: 8rem;
+  object-fit: cover;
+  margin-left: 1%;
+  flex: 1;
+  border-radius: 50%;
+  box-shadow: rgb(0 0 0 / 45%) 0 5px 8px;
+
+
+
+}
+.cuisineImg{
+  display: inline-block;
+  height: auto;
+  width: 9rem;
+  object-fit: cover;
+  margin-left: 1%;
+  flex: 1;
+  text-align: center;
+}
+.cuisineImg h3{
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+/* @media screen and (max-width:900px) {
+  .carousel img{
+  width: calc(96%/4);
+  }
+}
+@media screen and (max-width:550px) {
+  .carousel img{
+  width: calc(100%/2);
+  }
+} */

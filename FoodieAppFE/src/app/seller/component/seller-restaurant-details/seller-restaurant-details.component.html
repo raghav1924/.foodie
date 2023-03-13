@@ -1,0 +1,50 @@
+
+
+<div class="backimg">
+  <div class="restImg">
+    <img src="data:image/jpg;base64,{{restaurantDeatils?.restaurantImage}}" alt="">
+    <button (click)="restaurantImageDialog('RESTAURANT',restaurantDeatils?.restaurantId)"><mat-icon>edit</mat-icon></button>
+  </div>
+  <div class="Address">
+    <h1 class="restName">{{restaurantDeatils?.restaurantName}}</h1>
+    <p class="add" id="street">{{restaurantDeatils?.address?.street}}</p>
+    <p class="add" id="city">{{restaurantDeatils?.address?.city}}</p>
+    <p class="add" id="state">{{restaurantDeatils?.address?.state}}</p>
+    <p class="add" id="zipcode">{{restaurantDeatils?.address?.zipcode}}</p>
+  </div>
+  <div class="restbtn">
+  <button routerLink="orderRecieve">Order Details</button>
+  <button class="noselect"  (click)="deleteRestaurant(restaurantDeatils?.restaurantId)"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+  </div>
+
+</div>
+
+  <button class="btn">
+    <span (click)="openDialogAddCuisine()" class="text"><strong></strong>Add Cuisines</span>
+  </button>
+  <div *ngFor="let cuisine of restaurantDeatils?.menu" class="cont1">
+<div class="cuisinename"><p>{{cuisine.cuisineName}}</p><br><br><br>
+  <div class="icons1">
+  <mat-icon  class="delete" (click)="deleteCusine(restaurantDeatils?.restaurantId,cuisine.cuisineName)">delete</mat-icon>
+  <mat-icon  class="plus"   (click)="openDialog(cuisine.cuisineName)">add_box</mat-icon>
+  </div>
+  </div>
+<div class="cards1">
+<div *ngFor="let food of cuisine.foodItems" class="card3">
+        <div class="card-image"><img style="height: 180px;" src="data:image/jpg;base64,{{food.foodImage}}" alt=""> <button (click)="foodImageDialog('FOOD',restaurantDeatils?.restaurantId,cuisine.cuisineName,food.itemName)"><mat-icon>edit</mat-icon></button></div>
+        <div class="category">{{food.itemName}}</div>
+        <div class="heading"> <p>₹ {{food.itemPrice}}</p></div>
+        <div class="disc">{{food.itemDescription}}</div>
+        <div class="card-btn">
+          <button class="btn4" (click)="deleteFoodItem(restaurantDeatils?.restaurantId,cuisine.cuisineName,food.itemName)">Delete</button>
+          <button  class="btn5" (click)="openDailogForUpadte(cuisine.cuisineName,food.itemName)">Update</button>
+        </div>
+</div>
+<div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- <app-footer></app-footer> -->

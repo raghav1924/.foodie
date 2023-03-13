@@ -1,0 +1,538 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.backimg {
+  height: 12rem;
+  /* background-color: rgb(29, 43, 29); */
+  background: radial-gradient(circle at 100% 91.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* .backimg img {
+  width: 17%;
+  height: 80%;
+  margin: 1rem;
+} */
+
+.cont1 {
+  margin-top: 30px;
+}
+
+.Address {
+  margin-left: 50px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.restName {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.add {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+#zipcode {
+  margin-left: 120px;
+  margin-top: -30px;
+}
+
+.btn {
+  margin-top: 50px;
+  margin-left: 50px;
+  background-image: linear-gradient(144deg, #7e6f88, #918bb5 50%, #a4acad);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.btn:active,
+.btn:hover {
+  outline: 0;
+}
+
+.btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.btn:hover span {
+  background: none;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+/* cusines */
+
+.cuisinename {
+  margin-left: 260px;
+  width: 1120px;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 10px;
+  box-shadow: 0px 6px 10px rgba(28, 26, 26, 0.25);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: 3px solid #000;
+  text-transform: uppercase;
+}
+
+.icons1 {
+  margin-left: 1000px;
+  margin-top: -90px;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+}
+
+
+button {
+  margin-left: 220px;
+  margin-top: -20px;
+}
+
+.singup {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+
+.card2 {
+  margin-left: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 350px;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  box-shadow: 16px 16px 32px #c8c8c8,
+    -16px -16px 32px #fefefe;
+  border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox1 input:valid~span,
+.inputBox1 input:focus~span {
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+img {
+  width: 250px;
+  height: 150px;
+}
+
+.btn4 {
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 0.2em;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 4px;
+  border: 1px solid #000000;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+
+}
+
+/* .btn4:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+} */
+
+.btn4:hover {
+  color: #fff;
+}
+
+.btn4:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.btn5 {
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 0.2em;
+  background: #030303;
+  color: rgb(255, 255, 255);
+  border: 1px solid #000000;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+/* .btn5:active {
+  color: #ccb6b6;
+  box-shadow: inset 4px 4px 12px #ddd1d1,
+    inset -4px -4px 12px #a99f9f;
+} */
+
+.btn5:hover {
+  color: #fff;
+}
+
+.btn5:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.delete {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.plus {
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.plus:hover {
+  color: rgb(110, 184, 7);
+}
+
+/* button of fooditems */
+.cards1 {
+  display: flex;
+  margin-left: 250px;
+  width: 1180px;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card3 {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 250px;
+  height: 320px;
+  background: white;
+  padding: .9em;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 0.2px solid rgba(128, 128, 128, 0.211);
+}
+
+.card3:hover {
+  border: 1px solid #ccc8c8;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+.card-image{
+  position: relative;
+}
+.card-image button{
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #000000da;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* padding: 10px; */
+  border-radius: 50%;
+  color: #fff;
+  transition: 300ms ease-in-out;
+
+
+}
+.card-image button:hover{
+  transform: scale(1.2);
+}
+
+
+.category {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading p {
+  margin: 0;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.disc {
+  font-size: 10px;
+  font-weight: lighter;
+  margin-left: 4px;
+}
+.deleteRestaurant
+{
+margin-left: 300px;
+margin-top: 300px;
+}
+
+
+.noselect {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #000000;
+ }
+
+ .noselect, .noselect span {
+  transition: 200ms;
+ }
+
+ .noselect .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+ }
+
+ .noselect .icon {
+  position: absolute;
+  border-left: 1px solid #000000;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .noselect svg {
+  width: 15px;
+  fill: #eee;
+ }
+
+ .noselect:hover {
+  background: #000000;
+ }
+
+ .noselect:hover .text {
+  color: transparent;
+ }
+
+ .noselect:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+ }
+
+ .noselect:focus {
+  outline: none;
+ }
+
+ .noselect:active .icon svg {
+  transform: scale(0.8);
+ }
+
+ .restImg{
+  display: flex;
+  width: 14%;
+  position: relative;
+ }
+.restImg img{
+  width: 100%;
+  height: 10rem;
+}
+.restImg button{
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  border: none;
+  outline: none;
+  background-color: #000000da;
+  width: 3rem;
+  height: 3rem;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  transition: 300ms ease-in-out;
+}
+.restImg button:hover{
+  transform: scale(1.3);
+}
+.restbtn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 30%;
+  height:100%;
+  /* justify-self: flex-end; */
+  margin-left: auto;
+}
+.restbtn button{
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  /* width: 70%; */
+background-color: #000;
+height: 50px;
+cursor: pointer;
+}
+.restbtn button:nth-child(1){
+  width: 9rem;
+background-color: #000;
+color: #fff;
+}
+

@@ -1,0 +1,11 @@
+<div class="cardForAddFoodItem">
+    <form [formGroup]="AddFoodItems">
+            <span class="card__title">ADD FOOD ITEM</span>
+            <div class="card__form">
+                <input placeholder="Item Name" type="text" formControlName="itemName">
+                <input placeholder="Item Price" type="text" formControlName="itemPrice">
+                <input placeholder="Item Discription" type="text" formControlName="itemDescription">
+                <button class="sign-up" mat-dialog-close (click)="addItems()" [disabled]="!AddFoodItems.valid">Add</button>
+            </div>
+    </form> 
+    </div>

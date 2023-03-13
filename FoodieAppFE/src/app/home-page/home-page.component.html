@@ -1,0 +1,63 @@
+<body>
+  <header>
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="../../assets/food images/video.mp4" type="video/mp4">
+    </video>
+    <nav>
+      <div class="logocont">
+        <img src="../../assets/food images/Foodlogo.png"  class="flogo" alt="" srcset="">
+        <h1>.foodie</h1>
+      </div>
+      <div class="serachdiv dropdown">
+      <img src="../../assets/food images/SLogo.png" alt="" srcset="">
+      <input type="text" placeholder="Search your city" [(ngModel)]="selectedValue" (input)="filterOptions()" class="dropdown-input">
+      <div class="dropdown-content" *ngIf="showDropdown">
+        <a *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="dropdown-option">{{option}}</a>
+      </div>
+      </div>
+
+      <ul>
+        <li><a routerLink="../seller">Add Restaurant<mat-icon>dinner_dining</mat-icon></a></li>
+        <li *ngIf="logedIN" ><a routerLink="../cart">Cart<mat-icon>fastfood</mat-icon></a></li>
+        <li *ngIf="!logedIN"><a  (click)="openDialog()">Log in <mat-icon>how_to_reg</mat-icon></a></li>
+        <li *ngIf="logedIN"><a routerLink="../userprofile"><img class="profilePic" src="data:image/jpg;base64,{{userDetails?.profileImage}}" alt="">{{userDetails?.name}}</a></li>
+        <li *ngIf="logedIN"><a  (click)="logOut()">Log out <mat-icon>logout</mat-icon></a></li>
+
+      </ul>
+    </nav>
+    <div class="content">
+      <h1>Feeling <br><br><br> Hungry?</h1>
+      <a href="#">Order Food</a>
+    </div>
+  </header>
+  <div class="marquee mt">
+    <div class="marquee__content">
+      POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;  POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+  <section id="cuisineTranding">
+    <app-cuisine-carousel></app-cuisine-carousel>
+  </section>
+  <div class="marquee">
+    <div class="marquee__content">
+      RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+  <section>
+
+    <div class="container">
+      <div class="cardss" *ngFor="let restaurant of allRestaurants"  routerLink="{{restaurant.restaurantId}}" (click)="setRestId(restaurant.restaurantId)">
+        <img class="card-image" src="data:image/jpg;base64,{{restaurant.restaurantImage}}" alt="">
+        <div class="card-heading">{{restaurant.restaurantName}}</div>
+         <div  class="card-cuisine" *ngFor="let cuisine of restaurant.menu">{{cuisine.cuisineName}},</div>
+         <hr>
+         <div class="discount">
+          <h5><img src="../../../../assets/food images/discount.png"> 15% Discount </h5>   <h5> Free Delivery</h5>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <app-footer></app-footer>
+</body>
